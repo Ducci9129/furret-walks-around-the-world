@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Furret walks around the world</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/style.css">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjs@11.5.0/lib/browser/math.min.js"></script>
+    </head>
+    <body class="bg-dark glow">
+		<img width="1000" height="560" src="assets/furret-walk.gif" style="z-index: 50;position: fixed; transform: scaleX(-1); bottom: 0px; left: 10%">
+		<audio id='audio' src="assets/17 Accumula Town.mp3"></audio>
+        <video autoplay muted loop id="myVideo">
+  			<source src="assets/bg.mp4" type="video/mp4">
+		</video>
+		<h2 style='z-index: 50;position: fixed; color: white;' id="speed">Furret speed: 10 m/h</h2>
+		<h3 style="z-index: 50;position: fixed; color: white; top: 5%" id="distance">Distance traveled: 0 miles</h3>
+		<h3 style='z-index: 50;position: fixed; color: white; bottom: 1px'>1 site visit = +51000000 m/h (Ratelimited)</h3>
+		<h3 style='z-index: 50;position: fixed; color: white; left: 45%' id="earth">Furret has walked around the Earth 0 times</h3>
+		<h3 style='z-index: 50;position: fixed; color: white; left: 45%; top: 5%' id="sun">0 miles until the furret reaches Proxima Centauri</h3>
+		<h3 style='z-index: 50;position: fixed; color: white; left: 50%; bottom: 1px'>Click to enable audio</h3>
+		<div style="z-index: 50;position: fixed; color: white; top: 30%; left: 60%; width: 100; height: 100" id="reactions">
+			<button style="position: fixed; top: 40%" onclick="socket.emit('reaction')">React with 'Go'</button>
+		</div>
+    </body>
+	<!--<script async src="https://zink.tips/zwc.js?rid=63699e2830a0b47a2662d6d0&c=purple"></script>-->
+	<script src="js/script.js"></script>
+</html>

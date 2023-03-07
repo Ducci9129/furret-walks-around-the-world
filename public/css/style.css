@@ -1,0 +1,26 @@
+/* i love copy pasting */
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hover-up {
+  animation: hover-up 2s ease-in-out forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hover-up {
+  0% { transform: translateY(0); }
+  100% { 
+    transform: translateY(-50px);
+    opacity:0;
+  }
+}
+
+button {
+	border-radius: 10px;
+}
